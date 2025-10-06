@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Suminagashi Brush Pack | Segunda Pele Tattoo</title>
+  <meta name="description" content="Pack com 13 pincéis autorais de Suminagashi para Procreate + bônus de mandalas e geometria. Crie projetos modulares que se encaixam no corpo. Assinatura Segunda Pele Tattoo.">
+  <meta name="theme-color" content="#0b0b0b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Suminagashi Brush Pack | Segunda Pele Tattoo">
+  <meta property="og:description" content="13 pincéis autorais para Procreate + mandalas bônus. Fluxo orgânico que se encaixa na anatomia para projetos modulares e fechamentos.">
+  <meta property="og:image" content="/og-suminagashi.jpg">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    :root{
+      --bg:#0b0b0b;       /* fundo principal */
+      --fg:#ffffff;       /* texto principal */
+      --muted:#a1a1aa;    /* texto secundário */
+      --accent:#22c55e;   /* verde tat2price */
+      --accent-2:#16a34a; /* hover */
+      --card:#121212;     /* cards */
+      --stroke:#202020;   /* bordas sutis */
+      --container:1100px; /* largura */
+      --radius:18px;
+      --shadow:0 10px 30px rgba(0,0,0,.5);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,Helvetica,sans-serif;}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:var(--container);margin:0 auto;padding:0 20px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 20px;border-radius:12px;background:var(--accent);color:#0b0b0b;font-weight:700;border:1px solid #2ee680;box-shadow:0 8px 20px rgba(34,197,94,.25);transition:.2s}
+    .btn:hover{transform:translateY(-1px);background:var(--accent-2)}
+    .btn.ghost{background:#000;border:1px solid var(--stroke);color:var(--fg);box-shadow:none}
+    header{position:sticky;top:0;z-index:40;background:rgba(11,11,11,.7);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--stroke)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand-logo{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#16a34a,#22c55e);display:grid;place-items:center;border:1px solid #1a1a1a;overflow:hidden}
+    .brand-logo img{width:28px;height:28px;object-fit:contain;filter:brightness(0)}
+    .brand-name{font-weight:900;letter-spacing:.5px}
+    .nav-actions{display:flex;align-items:center;gap:10px}
+    .hero{padding:80px 0 40px;position:relative;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
+    .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid #1f1f1f;padding:8px 12px;border-radius:999px;color:var(--muted);background:#0f0f0f}
+    .hero h1{font-size: clamp(28px, 5vw, 56px);line-height:1.05;margin:18px 0 16px}
+    .hero p{color:var(--muted);font-size: clamp(15px, 2vw, 18px)}
+    .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .hero-card{background:radial-gradient(1200px 500px at 20% -20%, rgba(34,197,94,.15), transparent 60%), var(--card);border:1px solid var(--stroke);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+    .hero-media{position:relative}
+    .mock{border:1px solid var(--stroke);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .tick{display:flex;gap:10px;align-items:flex-start;color:#c7ffde}
+    .tick svg{min-width:20px;margin-top:2px}
+    section{padding:60px 0}
+    .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .kpi{background:var(--card);border:1px solid var(--stroke);border-radius:16px;padding:16px;text-align:center}
+    .kpi b{font-size:26px;letter-spacing:.3px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:var(--card);border:1px solid var(--stroke);border-radius:16px;padding:18px}
+    .card h3{margin:6px 0 8px}
+    .card p{color:var(--muted)}
+    .features .item{display:flex;gap:12px}
+    .pill{display:inline-block;border:1px solid var(--stroke);background:#0f0f0f;color:#d1d1d1;padding:6px 10px;border-radius:999px;font-size:12px}
+    .pricing{display:grid;grid-template-columns:1fr .9fr;gap:16px}
+    .price-card{background:linear-gradient(180deg,#121212, #0b0b0b);border:1px solid var(--stroke);border-radius:18px;padding:20px}
+    .price{font-size:40px;font-weight:900}
+    .bullet{display:flex;gap:10px;margin:8px 0;color:var(--muted)}
+    .faq details{background:var(--card);border:1px solid var(--stroke);border-radius:14px;padding:14px}
+    .faq summary{font-weight:600;cursor:pointer;list-style:none}
+    .faq summary::-webkit-details-marker{display:none}
+    .footer{border-top:1px solid var(--stroke);padding:30px 0;color:#bdbdbd}
+    .float-whats{position:fixed;right:18px;bottom:18px;z-index:60}
+    .float-whats a{display:inline-grid;place-items:center;width:56px;height:56px;border-radius:999px;background:#25D366;border:1px solid #36e078;box-shadow:0 8px 24px rgba(37,211,102,.35)}
+    .tag{font-size:12px;border:1px solid #1f1f1f;background:#0f0f0f;padding:4px 8px;border-radius:8px;color:#cfcfcf}
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr}
+      .pricing{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .kpis{grid-template-columns:repeat(2,1fr)}
+    }
+  </style>
+  <script type="application/ld+json">{
+    "@context":"https://schema.org",
+    "@type":"Product",
+    "name":"Suminagashi Brush Pack",
+    "brand":{"@type":"Brand","name":"Segunda Pele Tattoo"},
+    "description":"Pack com 13 pincéis autorais de Suminagashi para Procreate + bônus de mandalas e geometria.",
+    "offers":{"@type":"Offer","price":"97.00","priceCurrency":"BRL","availability":"https://schema.org/InStock"}
+  }</script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-logo"><img src="/logo-segunda-pele.png" alt="Logo Segunda Pele Tattoo"></div>
+        <div class="brand-name">Segunda Pele Tattoo</div>
+      </div>
+      <div class="nav-actions">
+        <a href="#pack" class="pill">O que vem no pack</a>
+        <a href="#preco" class="btn">Garantir acesso</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="badge">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l4 4L19 6" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Autoral. Modular. Anatômico.
+          </span>
+          <h1>Suminagashi Brush Pack para Procreate</h1>
+          <p>13 pincéis autorais que fluem com a anatomia e encaixam no corpo. Crie projetos modulares, solos ou fechamentos de braço em minutos. Bônus com mandalas e padrões geométricos para compor e expandir.</p>
+          <div class="hero-cta">
+            <a href="#preco" class="btn" aria-label="Ir para a seção de preço e comprar">Quero os 13 pincéis</a>
+            <a href="#demo" class="btn ghost" aria-label="Ver exemplos e como funciona">Ver exemplos</a>
+          </div>
+          <div class="hero-card" style="margin-top:16px">
+            <div class="tick"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l4 4L19 6" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Feitos para projetos autorais e coberturas. Fluxo orgânico com leitura e durabilidade pensadas para pele. </div>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img class="mock" src="/mockup-pack.png" alt="Mockup do Suminagashi Brush Pack para Procreate com 13 pincéis autorais">
+        </div>
+      </div>
+    </section>
+
+    <section id="kpis">
+      <div class="container kpis">
+        <div class="kpi"><b>13</b><div style="color:var(--muted)">pincéis autorais</div></div>
+        <div class="kpi"><b>+20</b><div style="color:var(--muted)">itens bônus</div></div>
+        <div class="kpi"><b>1 clique</b><div style="color:var(--muted)">encaixes anatômicos</div></div>
+        <div class="kpi"><b>23 anos</b><div style="color:var(--muted)">de experiência</div></div>
+      </div>
+    </section>
+
+    <section id="pack">
+      <div class="container">
+        <h2 style="font-size:32px;margin:0 0 10px">O que vem no pack</h2>
+        <p style="color:var(--muted);margin:0 0 18px">Coleção principal de 13 pincéis Suminagashi para compor, expandir e encaixar no corpo. Pensados para fluxo, contraste e legibilidade.</p>
+        <div class="grid-3">
+          <div class="card"><span class="tag">Coleção principal</span><h3>13 pincéis Suminagashi</h3><p>Fluxos líquidos, espirais, vórtices e texturas que se moldam ao corpo para projetos modulares e fechamentos.</p></div>
+          <div class="card"><span class="tag">Bônus</span><h3>10 mandalas autorais</h3><p>Traços únicos para compor centros de força e balancear o conjunto sem perder leitura.</p></div>
+          <div class="card"><span class="tag">Bônus</span><h3>10 padrões geométricos</h3><p>Estruturas versáteis para amarrar áreas, criar ritmo e facilitar encaixes anatômicos.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="container grid-3">
+        <div class="card item"><div>
+          <h3>Projetos modulares</h3>
+          <p>Monte peças solo ou expanda para ombro, peito, braço completo. Pincéis que conversam entre si.</p>
+        </div></div>
+        <div class="card item"><div>
+          <h3>Leitura e durabilidade</h3>
+          <p>Pensados para pele real. Contraste e espessuras que respeitam o tempo e o sol.</p>
+        </div></div>
+        <div class="card item"><div>
+          <h3>Workflow rápido</h3>
+          <p>Da ideia ao comp. Apresente ao cliente com mais segurança e feche projetos grandes com clareza.</p>
+        </div></div>
+      </div>
+    </section>
+
+    <section id="demo">
+      <div class="container">
+        <h2 style="font-size:32px;margin:0 0 10px">Veja na prática</h2>
+        <p style="color:var(--muted);margin:0 0 12px">Exemplos de encaixe anatômico e composições com mandalas e geometria.</p>
+        <div class="grid-3">
+          <div class="card"><img src="/demo-ombro.jpg" alt="Exemplo de composição Suminagashi encaixada no ombro"></div>
+          <div class="card"><img src="/demo-braco.jpg" alt="Fechamento de braço com fluxo líquido e mandala"></div>
+          <div class="card"><img src="/demo-perna.jpg" alt="Projeto modular na perna com padrões geométricos"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="conteudo" style="padding-top:20px">
+      <div class="container">
+        <div class="card">
+          <span class="tag">Conteúdo</span>
+          <h3 style="margin:10px 0">Lista dos pincéis</h3>
+          <p style="color:var(--muted);margin:0 0 6px">Exemplos de nomenclatura e uso sugerido:</p>
+          <ul style="line-height:1.9;color:#d7d7d7;margin:0;padding-left:18px">
+            <li>OB01 Apex - encaixes amplos</li>
+            <li>OB02 Vortex - fundos dinâmicos</li>
+            <li>OB03 Ink Spiral - foco e transição</li>
+            <li>OB04 Vórtice - peso visual balanceado</li>
+            <li>OB05 Obsidian - contraste chapado e textura</li>
+            <li>OB06 Stripes - traços largos em movimento</li>
+            <li>OB07 Onyx - simétrico com linhas fluidas</li>
+            <li>OB08 Marble - efeito marmorizado</li>
+            <li>OB09 Blade - eixo central afiado</li>
+            <li>OB10 Tide - ondas com impacto</li>
+            <li>OB11 Zenith - simetria com gradiente</li>
+            <li>OB12 V-Wave - composição em V</li>
+            <li>OB13 Ink Surge - fluxo contínuo</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="aula">
+      <div class="container pricing">
+        <div class="price-card">
+          <span class="tag">Bônus exclusivo</span>
+          <h3 style="margin:8px 0 6px">Vídeo aula: como criar fechamentos com fluidez líquida</h3>
+          <p style="color:var(--muted)">A lógica por trás do encaixe anatômico, combinações entre fluxo líquido, mandalas e geometria, e como manter legibilidade no longo prazo.</p>
+        </div>
+        <div class="price-card">
+          <span class="tag">Quem assina</span>
+          <h3 style="margin:8px 0 6px">Marcelo Costa</h3>
+          <p style="color:var(--muted)">23 anos de tatuagem. Referência em cobertura e tatuagem cultural. Pioneiro no Brasil em fluidez líquida no contexto da tatuagem.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="preco">
+      <div class="container pricing">
+        <div class="price-card">
+          <h2 style="font-size:28px;margin:0 0 10px">Suminagashi Brush Pack</h2>
+          <div class="price">R$ 97</div>
+          <div style="color:var(--muted);margin:6px 0 12px">acesso vitalício, atualizações do volume 01 incluídas</div>
+          <div class="bullet"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l4 4L19 6" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>13 pincéis autorais para Procreate</div>
+          <div class="bullet"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l4 4L19 6" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>10 mandalas e 10 padrões geométricos</div>
+          <div class="bullet"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l4 4L19 6" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Vídeo aula bônus</div>
+          <div class="bullet"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l4 4L19 6" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Suporte por e-mail</div>
+          <div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap">
+            <a class="btn" href="#comprar" id="btn-comprar">Comprar agora</a>
+            <a class="btn ghost" href="#faq">Perguntas frequentes</a>
+          </div>
+          <p style="color:#8affbf;font-size:12px;margin-top:10px">Selo Autoral. Uso pessoal autorizado. Vedada a revenda.</p>
+        </div>
+        <div class="price-card">
+          <span class="tag">Pagamento</span>
+          <h3 style="margin:8px 0 6px">Como funciona</h3>
+          <p style="color:var(--muted)">Você finaliza a compra, recebe o link de download e adiciona os pincéis no Procreate em poucos toques. Compatível com iPadOS e Apple Pencil.</p>
+          <div class="card" style="margin-top:12px">
+            <h4 style="margin:0 0 6px">Incluso no download</h4>
+            <ul style="line-height:1.9;color:#d7d7d7;margin:0;padding-left:18px">
+              <li>Arquivo .brushset com os 13 pincéis</li>
+              <li>Pasta bônus de mandalas e padrões</li>
+              <li>Guia rápido de instalação</li>
+              <li>Link da vídeo aula</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq">
+      <div class="container" style="display:grid;gap:12px">
+        <h2 style="font-size:28px;margin:0 0 10px">Perguntas frequentes</h2>
+        <details>
+          <summary>Funciona em Android, Windows ou outros apps?</summary>
+          <div style="color:var(--muted);margin-top:8px">Os pincéis são para Procreate em iPad. Para outros apps não garantimos compatibilidade.</div>
+        </details>
+        <details>
+          <summary>Posso usar em trabalhos comerciais para clientes?</summary>
+          <div style="color:var(--muted);margin-top:8px">Sim, uso autoral e comercial em projetos de tatuagem está liberado. Não é permitido revender, compartilhar os arquivos ou criar pacotes derivados para venda.</div>
+        </details>
+        <details>
+          <summary>Como instalo no Procreate?</summary>
+          <div style="color:var(--muted);margin-top:8px">Baixe o .brushset no iPad, toque para abrir com o Procreate e os pincéis serão importados automaticamente. O guia rápido acompanha o download.</div>
+        </details>
+        <details>
+          <summary>Tem reembolso?</summary>
+          <div style="color:var(--muted);margin-top:8px">Por se tratar de produto digital com acesso imediato, não oferecemos reembolso. Se tiver problemas técnicos, fale com nosso suporte.</div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div>© <span id="year"></span> Segunda Pele Tattoo. Todos os direitos reservados.</div>
+      <div style="display:flex;gap:10px">
+        <a href="https://instagram.com/segunda.pele.tattoo" target="_blank" rel="noopener" class="pill">Instagram</a>
+        <a href="mailto:contato@segundapeletattoo.com" class="pill">Contato</a>
+        <a href="#" class="pill">Termos</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="float-whats">
+    <a href="https://wa.me/5548999999999" aria-label="Falar no WhatsApp" target="_blank" rel="noopener">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0012.04 0C5.7 0 .56 5.14.56 11.48c0 2.03.53 4.04 1.54 5.8L0 24l6.86-2.03a11.46 11.46 0 005.18 1.31h.01c6.34 0 11.48-5.14 11.48-11.48 0-3.06-1.19-5.94-3.31-8.32zM12.04 21.1h-.01a9.6 9.6 0 01-4.9-1.34l-.35-.21-4.07 1.2 1.22-3.96-.23-.37a9.56 9.56 0 01-1.48-5.14c0-5.29 4.3-9.59 9.6-9.59a9.6 9.6 0 019.59 9.6c0 5.29-4.3 9.6-9.59 9.6zm5.46-7.18c-.3-.15-1.77-.87-2.04-.97-.27-.1-.46-.15-.66.15-.2.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.29-.48-2.46-1.53-.91-.81-1.53-1.8-1.71-2.1-.18-.3-.02-.46.13-.6.13-.13.3-.34.45-.5.15-.17.2-.28.3-.48.1-.2.05-.37-.02-.52-.07-.15-.66-1.59-.9-2.18-.24-.58-.48-.5-.66-.51h-.56c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.1 3.2 5.09 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.41.25-.7.25-1.29.18-1.41-.07-.12-.27-.2-.56-.35z"/></svg>
+    </a>
+  </div>
+
+  <script>
+    // Preenche ano no rodapé com segurança
+    (function(){
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    })();
+
+    // Compra: substitua pela URL real do checkout (Mercado Pago, Stripe ou outro)
+    (function(){
+      const btn = document.getElementById('btn-comprar');
+      if (!btn) return; // evita erro se id mudar
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        const checkoutUrl = 'https://mpago.la/s/SEU_LINK_DE_CHECKOUT'; // TODO: trocar pela URL real
+        window.location.href = checkoutUrl;
+      });
+    })();
+  </script>
+</body>
+</html>
