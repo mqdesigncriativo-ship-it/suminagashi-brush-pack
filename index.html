@@ -1,91 +1,96 @@
- <!doctype html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Organic Brush — Suminagashi Pack | Segunda Pele Tattoo</title>
-  <meta name="description" content="Pack com 13 pincéis modulares de Suminagashi para Procreate + bônus. Encaixe anatômico, fluxo orgânico e composição para projetos autorais e fechamentos.">
+  <title>Organic Brush — Suminagashi Brush Pack | Segunda Pele Tattoo</title>
+  <meta name="description" content="Pack com 13 pincéis modulares de Suminagashi para Procreate + bônus. Oferta de lançamento R$57,00. Projetos autorais com encaixe anatômico e fluxo orgânico.">
   <meta name="theme-color" content="#0b0b0b">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Organic Brush — Suminagashi Pack | Segunda Pele Tattoo">
-  <meta property="og:description" content="13 pincéis modulares para Procreate. Oferta de lançamento R$57,00.">
+  <meta property="og:title" content="Organic Brush — Suminagashi Brush Pack | Segunda Pele Tattoo">
+  <meta property="og:description" content="13 pincéis modulares para Procreate + bônus. Oferta de lançamento R$57,00.">
   <meta property="og:image" content="./og-suminagashi.jpg">
   <link rel="icon" type="image/png" href="./favicon.png">
   <meta name="twitter:card" content="summary_large_image">
   <style>
     :root{
-      --bg:#0b0b0b;       /* fundo escuro de sections */
-      --paper:#f7f7f7;     /* papel claro */
-      --fg:#0e0e0e;       /* texto escuro em papel */
-      --fg-inv:#ffffff;   /* texto em fundo escuro */
-      --muted:#6b7280;    /* texto secundário */
-      --accent:#22c55e;   /* verde */
-      --accent-2:#16a34a; /* verde escuro */
-      --stroke:#e9ecef;   /* borda leve */
-      --stroke-dark:#1f2937;
-      --container:1100px;
+      --bg:#0b0b0b;       /* fundo preto tat2price */
+      --fg:#ffffff;       /* texto principal */
+      --muted:#a1a1aa;    /* texto secundário */
+      --accent:#22c55e;   /* verde brand */
+      --accent-2:#16a34a; /* hover */
+      --card:#121212;     /* cards */
+      --stroke:#1f1f1f;   /* bordas subtis */
+      --container:1100px; /* largura */
       --radius:18px;
-      --shadow:0 10px 30px rgba(0,0,0,.08);
+      --shadow:0 10px 30px rgba(0,0,0,.5);
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--paper);color:var(--fg);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,Helvetica,sans-serif}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,Helvetica,sans-serif}
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block}
     .container{max-width:var(--container);margin:0 auto;padding:0 20px}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 20px;border-radius:12px;background:var(--accent);color:#0b0b0b;font-weight:800;border:1px solid #2ee680;box-shadow:0 8px 20px rgba(34,197,94,.25);transition:.2s;cursor:pointer}
-    .btn:hover{transform:translateY(-1px);background:var(--accent-2)}
-    .btn.ghost{background:transparent;border:1px solid var(--stroke-dark);color:#111827;box-shadow:none}
-    header{position:sticky;top:0;z-index:40;background:rgba(247,247,247,.8);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--stroke)}
-    .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+
+    /* Header */
+    header{position:sticky;top:0;z-index:40;background:rgba(11,11,11,.7);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--stroke)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
     .brand{display:flex;align-items:center;gap:12px}
-    .brand-logo{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#16a34a,#22c55e);display:grid;place-items:center;border:1px solid #d1fae5;overflow:hidden}
-    .brand-logo img{width:28px;height:28px;object-fit:contain;filter:brightness(0)}
+    .brand-logo{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#16a34a,#22c55e);display:grid;place-items:center;border:1px solid #1a1a1a;overflow:hidden}
+    .brand-logo img{width:28px;height:28px;object-fit:contain;filter:brightness(0)} /* logo preta sobre fundo verde */
     .brand-name{font-weight:900;letter-spacing:.5px}
     .nav-actions{display:flex;align-items:center;gap:10px}
 
-    /* HERO */
-    .hero{position:relative;overflow:hidden;padding:88px 0 40px}
-    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
-    .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid #d7fbe3;padding:8px 12px;border-radius:999px;color:#065f46;background:rgba(34,197,94,.10);font-weight:600}
-    .hero h1{font-size:clamp(28px,5vw,56px);line-height:1.05;margin:18px 0 12px}
-    .hero p{color:#374151;font-size:clamp(15px,2vw,18px)}
+    /* Hero */
+    .hero{position:relative;padding:90px 0 50px;overflow:hidden}
+    .bg-waves{position:absolute;inset:-10% -10% -10% -10%;pointer-events:none;opacity:.45;filter:contrast(120%) saturate(110%)}
+    .hero-grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
+    .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid #23402d;padding:8px 12px;border-radius:999px;color:#b6f7cf;background:#0e1a11}
+    .hero h1{font-size: clamp(30px, 5vw, 56px);line-height:1.05;margin:18px 0 12px}
+    .hero p{color:var(--muted);font-size: clamp(15px, 2vw, 18px)}
     .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
-    .price-tag{display:inline-flex;align-items:baseline;gap:10px;margin-top:12px}
-    .price-tag .now{font-size:40px;font-weight:900;color:#065f46}
-    .price-tag .old{color:#9ca3af;text-decoration:line-through}
 
-    /* papel texturizado + ondas SVG */
-    .ink-bg{position:absolute;inset:-20% -10% auto -10%; z-index:-1; opacity:.85;}
-    .ink-bg svg{width:120%;max-width:none}
+    /* Buttons */
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 20px;border-radius:12px;background:var(--accent);color:#0b0b0b;font-weight:800;border:1px solid #2ee680;box-shadow:0 8px 20px rgba(34,197,94,.25);transition:.2s}
+    .btn:hover{transform:translateY(-1px);background:var(--accent-2)}
+    .btn.ghost{background:#000;border:1px solid var(--stroke);color:var(--fg);box-shadow:none}
 
+    /* KPI */
     section{padding:60px 0}
-
     .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-    .kpi{background:#fff;border:1px solid var(--stroke);border-radius:16px;padding:16px;text-align:center;box-shadow:var(--shadow)}
+    .kpi{background:var(--card);border:1px solid var(--stroke);border-radius:16px;padding:16px;text-align:center;box-shadow:var(--shadow)}
     .kpi b{font-size:26px;letter-spacing:.3px}
 
+    /* Cards & grids */
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .card{background:#fff;border:1px solid var(--stroke);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
+    .card{background:var(--card);border:1px solid var(--stroke);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
+    .card h3{margin:6px 0 8px}
+    .card p{color:var(--muted)}
 
+    /* Pricing */
     .pricing{display:grid;grid-template-columns:1fr .9fr;gap:16px}
-    .price-card{background:#fff;border:1px solid var(--stroke);border-radius:18px;padding:20px;box-shadow:var(--shadow)}
-    .bullet{display:flex;gap:10px;margin:8px 0;color:#4b5563}
+    .price-card{background:linear-gradient(180deg,#121212, #0b0b0b);border:1px solid var(--stroke);border-radius:18px;padding:20px;box-shadow:var(--shadow)}
+    .price{font-size:44px;font-weight:900}
+    .price s{font-size:22px;color:#9ca3af;margin-left:6px}
+    .bullet{display:flex;gap:10px;margin:8px 0;color:#b9bbc0}
 
-    .form{background:#fff;border:1px solid var(--stroke);border-radius:18px;padding:18px;box-shadow:var(--shadow)}
-    .form .row{display:flex;gap:10px;flex-wrap:wrap}
-    input[type=email]{flex:1 1 280px;padding:14px 12px;border-radius:12px;border:1px solid #cbd5e1;font-size:16px}
-    .helper{color:#6b7280;font-size:13px;margin-top:6px}
-    .ok{color:#065f46}
-    .err{color:#b91c1c}
+    /* Form (dark) */
+    form{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    input[type=email]{flex:1;min-width:240px;padding:14px 12px;border-radius:12px;border:1px solid #303134;background:#0f0f0f;color:#fff;font-size:16px}
+    input[type=email]::placeholder{color:#8a8a8a}
+    .hint{font-size:12px;color:#8ca092;margin-top:6px}
+    .error{color:#fda4af;font-size:13px;display:none;margin-top:6px}
+    .ok{color:#86efac;font-size:13px;display:none;margin-top:6px}
 
-    .faq details{background:#fff;border:1px solid var(--stroke);border-radius:14px;padding:14px}
-    .faq summary{font-weight:600;cursor:pointer;list-style:none}
+    /* FAQ */
+    .faq details{background:var(--card);border:1px solid var(--stroke);border-radius:14px;padding:14px;box-shadow:var(--shadow)}
+    .faq summary{font-weight:700;cursor:pointer;list-style:none}
     .faq summary::-webkit-details-marker{display:none}
 
-    .footer{border-top:1px solid var(--stroke);padding:30px 0;color:#4b5563;background:#fff}
+    /* Footer */
+    .footer{border-top:1px solid var(--stroke);padding:30px 0;color:#bdbdbd}
 
     @media (max-width: 980px){
       .hero-grid{grid-template-columns:1fr}
@@ -97,9 +102,9 @@
   <script type="application/ld+json">{
     "@context":"https://schema.org",
     "@type":"Product",
-    "name":"Organic Brush — Suminagashi Pack (V1)",
+    "name":"Organic Brush — Suminagashi Brush Pack (V1)",
     "brand":{"@type":"Brand","name":"Segunda Pele Tattoo"},
-    "description":"13 pincéis modulares de Suminagashi para Procreate + bônus.",
+    "description":"13 pincéis modulares para Procreate + bônus (mandalas e padrões).",
     "offers":{"@type":"Offer","price":"57.00","priceCurrency":"BRL","availability":"https://schema.org/InStock"}
   }</script>
 </head>
@@ -112,70 +117,75 @@
       </div>
       <div class="nav-actions">
         <a href="#pack" class="btn ghost">O que vem no pack</a>
-        <a href="#comprar" class="btn">Garantir acesso</a>
+        <a href="#preco" class="btn">Garantir acesso</a>
       </div>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <!-- Fundo fluido (SVG ondas + manchas) -->
-      <div class="ink-bg" aria-hidden="true">
-        <svg viewBox="0 0 1200 500" preserveAspectRatio="none">
-          <defs>
-            <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stop-color="#22c55e" stop-opacity="0.18"/>
-              <stop offset="100%" stop-color="#16a34a" stop-opacity="0.04"/>
+      <!-- BG Suminagashi: linhas fluidas semi-transparentes em SVG (leve e responsivo) -->
+      <svg class="bg-waves" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#22c55e" stop-opacity="0.30"/>
+            <stop offset="1" stop-color="#16a34a" stop-opacity="0.10"/>
+          </linearGradient>
+          <mask id="fade">
+            <linearGradient id="fade-g" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="white"/>
+              <stop offset="80%" stop-color="white"/>
+              <stop offset="100%" stop-color="black"/>
             </linearGradient>
-            <filter id="f" x="-20%" y="-20%" width="140%" height="140%">
-              <feTurbulence type="fractalNoise" baseFrequency="0.005" numOctaves="2"/>
-              <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0.6  0 0 0 0 0.3  0 0 0 0.25 0"/>
-              <feGaussianBlur stdDeviation="8"/>
-            </filter>
-          </defs>
-          <rect width="1200" height="500" fill="url(#g)"/>
-          <circle cx="980" cy="120" r="120" filter="url(#f)" fill="#22c55e" fill-opacity="0.08"/>
-          <path d="M0,380 C200,320 400,420 600,360 C800,300 1000,420 1200,360 L1200,500 L0,500 Z" fill="#16a34a" opacity="0.08"/>
-        </svg>
-      </div>
+            <rect width="100%" height="100%" fill="url(#fade-g)"/>
+          </mask>
+        </defs>
+        <g fill="none" stroke="url(#ink)" stroke-width="0.8" mask="url(#fade)">
+          <path d="M0 120 C 240 40, 520 200, 800 110 S 1180 60, 1440 140"/>
+          <path d="M-40 210 C 180 310, 420 160, 760 260 S 1180 340, 1500 280"/>
+          <path d="M0 380 C 200 320, 420 420, 700 360 S 1120 420, 1440 360"/>
+          <path d="M-60 520 C 220 440, 520 620, 860 510 S 1260 480, 1500 560"/>
+          <path d="M0 700 C 260 640, 520 720, 840 690 S 1180 720, 1440 700"/>
+        </g>
+      </svg>
 
       <div class="container hero-grid">
         <div>
           <span class="badge">Autoral • Modular • Anatômico</span>
-          <h1>Organic Brush — Suminagashi Pack para Procreate</h1>
-          <p>13 pincéis modulares que fluem com a anatomia e aceleram seu comp. Monte peças solo ou fechamentos com leitura, contraste e ritmo. Bônus com mandalas e padrões para amarrar a composição.</p>
-          <div class="price-tag">
-            <div class="now">R$ 57,00</div>
-            <div class="old">R$ 97,00</div>
-          </div>
+          <h1>Organic Brush — Volume 01: Fluidez Líquida</h1>
+          <p>13 pincéis modulares para Procreate que se encaixam na anatomia, criam composições orgânicas e aceleram seu fluxo criativo. Assinatura de <b>Marcelo Costa</b>.</p>
           <div class="hero-cta">
-            <a href="#comprar" class="btn" aria-label="Ir para o formulário e comprar">Garantir meu acesso</a>
-            <a href="#demo" class="btn ghost" aria-label="Ver exemplos">Ver exemplos</a>
+            <a href="#preco" class="btn" aria-label="Ir para a seção de preço e comprar">Garantir meu acesso</a>
+            <a href="#demo" class="btn ghost" aria-label="Ver exemplos e como funciona">Ver exemplos</a>
           </div>
         </div>
         <div>
-          <img src="./mockup-pack.png" alt="Mockup do Suminagashi Brush Pack (Organic Brush)">
+          <div class="price-card">
+            <h3 style="margin:0 0 6px">Oferta de lançamento</h3>
+            <div class="price">R$ 57,00 <s>R$ 97,00</s></div>
+            <p class="hint">Acesso vitalício + atualizações do Volume 01 incluídas</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="kpis">
       <div class="container kpis">
-        <div class="kpi"><b>13</b><div style="color:#6b7280">pincéis modulares</div></div>
-        <div class="kpi"><b>+20</b><div style="color:#6b7280">itens bônus</div></div>
-        <div class="kpi"><b>1 clique</b><div style="color:#6b7280">encaixes anatômicos</div></div>
-        <div class="kpi"><b>23 anos</b><div style="color:#6b7280">de experiência</div></div>
+        <div class="kpi"><b>13</b><div style="color:var(--muted)">pincéis modulares</div></div>
+        <div class="kpi"><b>+20</b><div style="color:var(--muted)">itens bônus</div></div>
+        <div class="kpi"><b>1 clique</b><div style="color:var(--muted)">encaixes anatômicos</div></div>
+        <div class="kpi"><b>23 anos</b><div style="color:var(--muted)">de experiência</div></div>
       </div>
     </section>
 
     <section id="pack">
       <div class="container">
         <h2 style="font-size:32px;margin:0 0 10px">O que vem no pack</h2>
-        <p style="color:#4b5563;margin:0 0 18px">Coleção principal de 13 pincéis + bônus de mandalas e padrões geométricos. Construídos para fluxo, contraste e legibilidade em pele real.</p>
+        <p style="color:var(--muted);margin:0 0 18px">Coleção principal de 13 pincéis Suminagashi + bônus de mandalas e padrões geométricos. Construídos para fluxo, contraste e legibilidade em pele real.</p>
         <div class="grid-3">
-          <div class="card"><span class="badge" style="border-color:#e5e7eb;background:#fff;color:#111827">Coleção principal</span><h3>13 pincéis Suminagashi</h3><p>Fluxos líquidos, espirais, vórtices e texturas que se moldam ao corpo para projetos modulares e fechamentos.</p></div>
-          <div class="card"><span class="badge" style="border-color:#e5e7eb;background:#fff;color:#111827">Bônus</span><h3>10 mandalas autorais</h3><p>Centros de força para composições com leitura clara e impacto.</p></div>
-          <div class="card"><span class="badge" style="border-color:#e5e7eb;background:#fff;color:#111827">Bônus</span><h3>10 padrões geométricos</h3><p>Estruturas para amarrar áreas, criar ritmo e facilitar encaixes.</p></div>
+          <div class="card"><span class="hint">Coleção principal</span><h3>13 pincéis Suminagashi</h3><p>Fluxos líquidos, espirais, vórtices e texturas que se moldam ao corpo para projetos modulares e fechamentos.</p></div>
+          <div class="card"><span class="hint">Bônus</span><h3>10 mandalas autorais</h3><p>Centros de força para composições com leitura clara e impacto.</p></div>
+          <div class="card"><span class="hint">Bônus</span><h3>10 padrões geométricos</h3><p>Estruturas para amarrar áreas, criar ritmo e facilitar encaixes.</p></div>
         </div>
       </div>
     </section>
@@ -191,7 +201,7 @@
     <section id="demo">
       <div class="container">
         <h2 style="font-size:32px;margin:0 0 10px">Veja na prática</h2>
-        <p style="color:#4b5563;margin:0 0 12px">Exemplos de encaixe anatômico e composições com mandalas e geometria.</p>
+        <p style="color:var(--muted);margin:0 0 12px">Exemplos de encaixe anatômico e composições com mandalas e geometria.</p>
         <div class="grid-3">
           <div class="card"><img src="./demo-ombro.jpg" alt="Composição Suminagashi encaixada no ombro"></div>
           <div class="card"><img src="./demo-braco.jpg" alt="Fechamento de braço com fluxo líquido e mandala"></div>
@@ -200,56 +210,39 @@
       </div>
     </section>
 
-    <section id="conteudo" style="padding-top:20px">
-      <div class="container">
-        <div class="card">
-          <span class="badge" style="border-color:#e5e7eb;background:#fff;color:#111827">Conteúdo</span>
-          <h3 style="margin:10px 0">Lista dos pincéis</h3>
-          <ul style="line-height:1.9;color:#374151;margin:0;padding-left:18px">
-            <li>OB01 Apex — encaixes amplos</li>
-            <li>OB02 Vortex — fundos dinâmicos</li>
-            <li>OB03 Ink Spiral — foco e transição</li>
-            <li>OB04 Vórtice — peso visual balanceado</li>
-            <li>OB05 Obsidian — contraste chapado e textura</li>
-            <li>OB06 Stripes — traços largos em movimento</li>
-            <li>OB07 Onyx — simétrico com linhas fluidas</li>
-            <li>OB08 Marble — efeito marmorizado</li>
-            <li>OB09 Blade — eixo central afiado</li>
-            <li>OB10 Tide — ondas com impacto</li>
-            <li>OB11 Zenith — simetria com gradiente</li>
-            <li>OB12 V-Wave — composição em V</li>
-            <li>OB13 Ink Surge — fluxo contínuo</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="autor">
+    <section id="preco">
       <div class="container pricing">
         <div class="price-card">
-          <h3 style="margin:0 0 6px">Assinatura: Marcelo Costa</h3>
-          <p style="color:#4b5563">23 anos de tatuagem. Referência em cobertura e tatuagem cultural. Pioneiro no Brasil em fluidez líquida aplicada à tatuagem.</p>
-        </div>
-        <div class="price-card">
-          <h3 style="margin:0 0 6px">Oferta de lançamento</h3>
-          <p class="price-tag" style="margin:6px 0 6px"><span class="now">R$ 57,00</span> <span class="old">R$ 97,00</span></p>
-          <div class="bullet">✔ 13 pincéis para Procreate</div>
+          <h2 style="font-size:28px;margin:0 0 10px">Organic Brush — Suminagashi Brush Pack</h2>
+          <div class="price">R$ 57,00 <s>R$ 97,00</s></div>
+          <div style="color:#cdd5cf;margin:6px 0 12px">Acesso vitalício • Atualizações do Volume 01 incluídas</div>
+
+          <!-- Formulário de e-mail + checkout -->
+          <form id="purchase-form" novalidate>
+            <input id="customer-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="seu@e-mail.com" aria-label="Digite seu e-mail para receber o link de compra" required>
+            <button type="submit" class="btn" id="btn-comprar">Garantir acesso</button>
+            <div class="error" id="email-err">Digite um e-mail válido.</div>
+            <div class="ok" id="email-ok">E-mail recebido! Redirecionando…</div>
+          </form>
+
+          <div class="bullet">✔ 13 pincéis autorais para Procreate</div>
           <div class="bullet">✔ Bônus: 10 mandalas e 10 padrões</div>
           <div class="bullet">✔ Acesso vitalício ao Volume 01</div>
         </div>
-      </div>
-    </section>
 
-    <section id="comprar">
-      <div class="container">
-        <div class="form" role="form" aria-labelledby="form-title">
-          <h2 id="form-title" style="margin:0 0 10px">Garanta seu acesso — R$ 57,00</h2>
-          <p class="helper">Digite seu e-mail para receber o link de download e concluir o pagamento pelo Mercado Pago.</p>
-          <div class="row" style="margin-top:10px">
-            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required aria-label="E-mail">
-            <button id="btn-comprar" class="btn" type="button">Comprar agora</button>
+        <div class="price-card">
+          <span class="hint">Como funciona</span>
+          <h3 style="margin:8px 0 6px">Pagamento e download</h3>
+          <p style="color:#b9bbc0">Você finaliza a compra, recebe o link de download e adiciona os pincéis no Procreate em poucos toques. Compatível com iPadOS e Apple Pencil.</p>
+          <div class="card" style="margin-top:12px">
+            <h4 style="margin:0 0 6px">Incluso no download</h4>
+            <ul style="line-height:1.9;color:#cfd2d7;margin:0;padding-left:18px">
+              <li>Arquivo .brushset com os 13 pincéis</li>
+              <li>Pasta bônus de mandalas e padrões</li>
+              <li>Guia rápido de instalação</li>
+              <li>Link da vídeo aula</li>
+            </ul>
           </div>
-          <div id="msg" class="helper" aria-live="polite"></div>
         </div>
       </div>
     </section>
@@ -259,19 +252,19 @@
         <h2 style="font-size:28px;margin:0 0 10px">Perguntas frequentes</h2>
         <details>
           <summary>Funciona em Android, Windows ou outros apps?</summary>
-          <div style="color:#4b5563;margin-top:8px">Os pincéis são para Procreate em iPad. Para outros apps não garantimos compatibilidade.</div>
+          <div style="color:#b9bbc0;margin-top:8px">Os pincéis são para Procreate em iPad. Para outros apps não garantimos compatibilidade.</div>
         </details>
         <details>
           <summary>Posso usar comercialmente?</summary>
-          <div style="color:#4b5563;margin-top:8px">Sim, uso autoral e comercial em projetos de tatuagem está liberado. Não é permitido revender, compartilhar os arquivos ou criar pacotes derivados para venda.</div>
+          <div style="color:#b9bbc0;margin-top:8px">Sim, uso autoral e comercial em projetos de tatuagem está liberado. Não é permitido revender, compartilhar os arquivos ou criar pacotes derivados para venda.</div>
         </details>
         <details>
           <summary>Como instalo no Procreate?</summary>
-          <div style="color:#4b5563;margin-top:8px">Baixe o .brushset no iPad, toque para abrir com o Procreate e os pincéis serão importados automaticamente. Um guia rápido acompanha o download.</div>
+          <div style="color:#b9bbc0;margin-top:8px">Baixe o .brushset no iPad, toque para abrir com o Procreate e os pincéis serão importados automaticamente. Um guia rápido acompanha o download.</div>
         </details>
         <details>
           <summary>Reembolso</summary>
-          <div style="color:#4b5563;margin-top:8px">Produto digital com acesso imediato. Não oferecemos reembolso. Problemas técnicos? Fale com o suporte.</div>
+          <div style="color:#b9bbc0;margin-top:8px">Produto digital com acesso imediato. Não oferecemos reembolso. Problemas técnicos? Fale com o suporte.</div>
         </details>
       </div>
     </section>
@@ -281,60 +274,57 @@
     <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
       <div>© <span id="year"></span> Segunda Pele Tattoo. Todos os direitos reservados.</div>
       <div style="display:flex;gap:10px">
-        <a href="https://instagram.com/segunda.pele.tattoo" target="_blank" rel="noopener">Instagram</a>
-        <a href="mailto:contato@segundapeletattoo.com">Contato</a>
-        <a href="#">Termos</a>
+        <a href="https://instagram.com/segunda.pele.tattoo" target="_blank" rel="noopener" class="btn ghost" style="padding:8px 12px">Instagram</a>
+        <a href="mailto:contato@segundapeltattoo.com" class="btn ghost" style="padding:8px 12px">Contato</a>
+        <a href="#" class="btn ghost" style="padding:8px 12px">Termos</a>
       </div>
     </div>
   </footer>
 
   <script>
     // Utilidades
-    const $ = (q)=>document.querySelector(q);
+    const $ = (sel)=>document.querySelector(sel);
+    const emailOk = $('#email-ok');
+    const emailErr = $('#email-err');
 
-    // Ano no footer
-    (function(){ const y=$('#year'); if(y) y.textContent = new Date().getFullYear(); })();
-
-    // Compra com e-mail → webhook → checkout
+    // Ano do rodapé — com guard para evitar erro
     (function(){
-      const btn = $('#btn-comprar');
-      const email = $('#email');
-      const msg = $('#msg');
-      if(!btn||!email) return;
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+      console.assert(!!yearEl, '#year deveria existir');
+    })();
 
-      const WEBHOOK_URL = 'https://SEU_ENDPOINT_DE_WEBHOOK/mercadopago'; // TODO: trocar
-      const CHECKOUT_URL = 'https://mpago.la/s/SEU_LINK_DE_CHECKOUT';     // TODO: trocar
+    // Form + Webhook Mercado Pago
+    (function(){
+      const form = document.getElementById('purchase-form');
+      if (!form) return;
 
-      function feedback(text, ok){
-        msg.textContent = text;
-        msg.className = 'helper ' + (ok ? 'ok':'err');
-      }
+      const emailInput = document.getElementById('customer-email');
+      const checkoutUrl = 'https://mpago.la/s/SEU_LINK_DE_CHECKOUT'; // TODO: substituir pelo link real do checkout
+      const WEBHOOK_URL = 'https://SEU_WEBHOOK_DE_EMAIL.com/capture'; // TODO: substituir pelo webhook que grava o e-mail
 
-      btn.addEventListener('click', async ()=>{
-        const v = (email.value||'').trim();
-        if(!v || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)){
-          feedback('Digite um e-mail válido.', false); return;
+      const validEmail = (v)=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(v).toLowerCase());
+
+      form.addEventListener('submit', async (e)=>{
+        e.preventDefault();
+        emailErr.style.display = 'none';
+        emailOk.style.display = 'none';
+        const email = (emailInput.value||'').trim();
+        if (!validEmail(email)){
+          emailErr.style.display = 'block';
+          return;
         }
-        feedback('Gerando link de pagamento…', true);
         try{
-          // 1) Notifica seu backend/webhook (opcional, mas recomendado para registro)
-          await fetch(WEBHOOK_URL, {
+          // Envia e-mail para seu webhook (captura para CRM/MP) — não bloqueia o fluxo se falhar
+          await fetch(WEBHOOK_URL,{
             method:'POST',
             headers:{'Content-Type':'application/json'},
-            body: JSON.stringify({
-              product: 'organic_brush_v1',
-              email: v,
-              price: 57.00,
-              currency: 'BRL',
-              source: 'landing_suminagashi'
-            })
-          }).catch(()=>{}); // mesmo que falhe, segue para o checkout
-
-          // 2) Redireciona ao checkout público
-          window.location.href = CHECKOUT_URL;
-        }catch(e){
-          feedback('Não foi possível iniciar o pagamento. Tente novamente.', false);
-        }
+            body: JSON.stringify({ email, product:'organic-brush-v1', price:57.00, currency:'BRL', ts: Date.now() })
+          }).catch(()=>{});
+          emailOk.style.display = 'block';
+        }catch(_){/* segue o baile */}
+        // Redireciona para o checkout
+        window.location.href = checkoutUrl;
       });
     })();
   </script>
