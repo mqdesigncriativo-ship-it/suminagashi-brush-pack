@@ -116,14 +116,18 @@
       .grid-gallery{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
     }
   .hero::after{content:"";position:absolute;inset:0 0 0 65%;z-index:-1;opacity:calc(var(--inkOpacity) - 0.03);background-image:url('./ink-bg-right.png');background-size:contain;background-repeat:no-repeat;background-position:right 10%;filter:grayscale(100%)}
+  .brand .brand-logo, .brand .brand-name{display:none !important}
+  .brand .brand-full{height:38px;width:auto;display:block}
+  .hero::before{content:"";position:absolute;inset:0 !important;z-index:-1;opacity:var(--inkOpacity,0.2);background-image:url('./ink-bg.png') !important;background-repeat:no-repeat !important;background-size:contain !important;background-position:right center !important;filter:grayscale(100%)}
+  .hero::after{display:none !important}
+  @media (max-width: 900px){ .brand .brand-full{height:32px} }
   </style>
 </head>
 <body>
   <header>
     <div class="container nav">
       <div class="brand">
-        <div class="brand-logo"><img src="./logo-segunda-pele.png" alt="Logo Segunda Pele Tattoo"></div>
-        <div class="brand-name">Segunda Pele Tattoo</div>
+        <img class="brand-full" src="./logo-full.png" alt="Segunda Pele Tattoo"/>
       </div>
       <div class="nav-actions">
         <a href="#pack" class="btn ghost">O que vem no pack</a>
