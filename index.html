@@ -20,8 +20,8 @@
       --bg:#0b0b0b;       /* fundo preto tat2price */
       --fg:#ffffff;       /* texto principal */
       --muted:#a1a1aa;    /* texto secundário */
-      --accent:#22c55e;   /* verde brand */
-      --accent-2:#16a34a; /* hover */
+      --accent:#e5e5e5;   /* destaque mono */
+      --accent-2:#ffffff; /* hover */
       --card:#121212;     /* cards */
       --stroke:#1f1f1f;   /* bordas sutis */
       --container:1100px; /* largura */
@@ -38,24 +38,28 @@
     header{position:sticky;top:0;z-index:40;background:rgba(11,11,11,.7);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--stroke)}
     .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
     .brand{display:flex;align-items:center;gap:12px}
-    .brand-logo{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#16a34a,#22c55e);display:grid;place-items:center;border:1px solid #1a1a1a;overflow:hidden}
+    .brand-logo{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#1a1a1a,#2a2a2a);display:grid;place-items:center;border:1px solid #1a1a1a;overflow:hidden}
     .brand-logo img{width:28px;height:28px;object-fit:contain;filter:brightness(0)} /* logo preta sobre fundo verde */
     .brand-name{font-weight:900;letter-spacing:.5px}
     .nav-actions{display:flex;align-items:center;gap:10px}
 
     /* Hero */
     .hero{position:relative;padding:90px 0 50px;overflow:hidden}
-    /* Fundo Suminagashi ESTÁTICO (SVG inline como background-image) */
-    .hero::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.20;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 900'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%2322c55e'/><stop offset='100%' stop-color='%2316a34a'/></linearGradient></defs><g fill='none' stroke='url(%23g)' stroke-width='1' stroke-linecap='round' opacity='0.55'><path d='M0 120 C 240 40, 520 200, 800 110 S 1180 60, 1440 140' /><path d='M-40 210 C 180 310, 420 160, 760 260 S 1180 340, 1500 280' /><path d='M0 380 C 200 320, 420 420, 700 360 S 1120 420, 1440 360' /><path d='M-60 520 C 220 440, 520 620, 860 510 S 1260 480, 1500 560' /><path d='M0 700 C 260 640, 520 720, 840 690 S 1180 720, 1440 700' /></g></svg>");background-size:cover;background-position:center;filter:contrast(110%) saturate(110%)}
+    /* Fundo Suminagashi ESTÁTICO (SVG inline como background-image, tons de cinza) */
+    .hero::before{content:"";position:absolute;inset:0;z-index:-1;opacity:var(--inkOpacity,0.32);background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 900'><g fill='none' stroke='%23b3b3b3' stroke-width='1.4' stroke-linecap='round' opacity='0.65'><path d='M-40 140 C 220 30, 520 240, 840 120 S 1180 50, 1500 160' /><path d='M-60 260 C 200 360, 480 160, 820 260 S 1200 340, 1500 300' /><path d='M-80 400 C 180 320, 500 440, 860 360 S 1260 420, 1520 360' /><path d='M-60 560 C 240 460, 540 640, 900 520 S 1320 500, 1520 580' /><path d='M-40 720 C 260 640, 540 740, 900 700 S 1260 740, 1480 720' /></g></svg>");background-size:cover;background-position:center;filter:contrast(115%) saturate(105%);} 
+    /* Alternativa: usar imagem real de fundo (ex: bg-suminagashi.jpg) */
+    .hero.has-image::before{background-image:url('./bg-suminagashi.jpg');background-size:cover;background-position:center;opacity:var(--inkOpacity,0.26);} 
     .hero-grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
-    .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid #23402d;padding:8px 12px;border-radius:999px;color:#b6f7cf;background:#0e1a11}
+    .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid #3a3a3a;padding:8px 12px;border-radius:999px;color:#e5e5e5;background:#121212}
     .slogan{color:#c9c9c9;font-size:14px;letter-spacing:.3px}
     .hero h1{font-size: clamp(30px, 5vw, 56px);line-height:1.05;margin:10px 0 8px}
     .hero p{color:var(--muted);font-size: clamp(15px, 2vw, 18px)}
     .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
 
     /* Buttons */
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 20px;border-radius:12px;background:var(--accent);color:#0b0b0b;font-weight:800;border:1px solid #2ee680;box-shadow:0 8px 20px rgba(34,197,94,.25);transition:.2s}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 20px;border-radius:12px;background:var(--accent);color:#0b0b0b;font-weight:800;border:1px solid #d4d4d4;box-shadow:0 8px 20px rgba(255,255,255,.05);transition:.2s}
+    .btn:hover{transform:translateY(-1px);background:var(--accent-2)}
+    .btn.ghost{background:#000;border:1px solid var(--stroke);color:var(--fg);box-shadow:none}
     .btn:hover{transform:translateY(-1px);background:var(--accent-2)}
     .btn.ghost{background:#000;border:1px solid var(--stroke);color:var(--fg);box-shadow:none}
 
@@ -199,7 +203,7 @@
         <div class="price-card">
           <h2 style="font-size:28px;margin:0 0 10px">Organic Brush — Suminagashi Brush Pack</h2>
           <div class="price">R$ 57,00 <s>R$ 97,00</s></div>
-          <div style="color:#cdd5cf;margin:6px 0 12px">Acesso vitalício • Atualizações do Volume 01 incluídas</div>
+          <div style="color:#d1d1d1;margin:6px 0 12px">Acesso vitalício • Atualizações do Volume 01 incluídas</div>
 
           <!-- Formulário de e-mail + checkout -->
           <form id="purchase-form" novalidate>
