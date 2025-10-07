@@ -5,28 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Organic Brush — Suminagashi Brush Pack | Segunda Pele Tattoo</title>
   <meta name="description" content="Pack com 13 pincéis modulares de Suminagashi para Procreate + bônus. Oferta de lançamento R$57,00. Projetos autorais com encaixe anatômico e fluxo orgânico.">
-  <meta name="theme-color" content="#0b0b0b">
+  <meta name="theme-color" content="#ffffff">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Inter para texto + DM Serif Display para títulos (look editorial do e-book) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Serif+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Organic Brush — Suminagashi Brush Pack | Segunda Pele Tattoo">
-  <meta property="og:description" content="13 pincéis modulares para Procreate + bônus. Oferta de lançamento R$57,00.">
+  <meta property="og:description" content="13 pincéis modulares para Procreate + bônus. Oferta R$57,00.">
   <meta property="og:image" content="./og-suminagashi.jpg">
   <link rel="icon" type="image/png" href="./favicon.png">
   <meta name="twitter:card" content="summary_large_image">
   <style>
     :root{
-      --bg:#0b0b0b;       /* fundo preto tat2price */
-      --fg:#ffffff;       /* texto principal */
-      --muted:#a1a1aa;    /* texto secundário */
-      --accent:#e5e5e5;   /* destaque mono */
-      --accent-2:#ffffff; /* hover */
-      --card:#121212;     /* cards */
-      --stroke:#1f1f1f;   /* bordas sutis */
-      --container:1100px; /* largura */
+      /* Paleta P&B minimal (como o e-book) */
+      --bg:#ffffff;        /* fundo branco */
+      --fg:#0b0b0b;        /* texto principal */
+      --muted:#4b5563;     /* texto secundário */
+      --ink:#9aa0a6;       /* linhas de fundo (cinza suave) */
+      --card:#f7f7f7;      /* blocos */
+      --stroke:#e5e7eb;    /* bordas leves */
+      --accent:#0b0b0b;    /* CTA preto */
+      --accent-2:#111111;  /* hover */
+      --container:1120px;
       --radius:18px;
-      --shadow:0 10px 30px rgba(0,0,0,.5);
+      --shadow:0 10px 30px rgba(11,11,11,.08);
+      --inkOpacity:0.16;   /* opacidade do fundo fluído */
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,Helvetica,sans-serif}
@@ -34,79 +38,76 @@
     img{max-width:100%;display:block}
     .container{max-width:var(--container);margin:0 auto;padding:0 20px}
 
-    /* Header */
-    header{position:sticky;top:0;z-index:40;background:rgba(11,11,11,.7);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--stroke)}
-    .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+    /* Header clean */
+    header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.85);backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid var(--stroke)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
     .brand{display:flex;align-items:center;gap:12px}
-    .brand-logo{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#1a1a1a,#2a2a2a);display:grid;place-items:center;border:1px solid #1a1a1a;overflow:hidden}
-    .brand-logo img{width:28px;height:28px;object-fit:contain;filter:brightness(0)} /* logo preta sobre fundo verde */
-    .brand-name{font-weight:900;letter-spacing:.5px}
+    .brand-logo{width:44px;height:44px;border-radius:12px;background:#f2f2f2;display:grid;place-items:center;border:1px solid var(--stroke);overflow:hidden}
+    .brand-logo img{width:28px;height:28px;object-fit:contain}
+    .brand-name{font-weight:800;letter-spacing:.4px}
     .nav-actions{display:flex;align-items:center;gap:10px}
 
-    /* Hero */
-    .hero{position:relative;padding:90px 0 50px;overflow:hidden}
-    /* Fundo Suminagashi ESTÁTICO (SVG inline como background-image, tons de cinza) */
-    .hero::before{content:"";position:absolute;inset:0;z-index:-1;opacity:var(--inkOpacity,0.32);background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 900'><g fill='none' stroke='%23b3b3b3' stroke-width='1.4' stroke-linecap='round' opacity='0.65'><path d='M-40 140 C 220 30, 520 240, 840 120 S 1180 50, 1500 160' /><path d='M-60 260 C 200 360, 480 160, 820 260 S 1200 340, 1500 300' /><path d='M-80 400 C 180 320, 500 440, 860 360 S 1260 420, 1520 360' /><path d='M-60 560 C 240 460, 540 640, 900 520 S 1320 500, 1520 580' /><path d='M-40 720 C 260 640, 540 740, 900 700 S 1260 740, 1480 720' /></g></svg>");background-size:cover;background-position:center;filter:contrast(115%) saturate(105%);} 
-    /* Alternativa: usar imagem real de fundo (ex: bg-suminagashi.jpg) */
-    .hero.has-image::before{background-image:url('./bg-suminagashi.jpg');background-size:cover;background-position:center;opacity:var(--inkOpacity,0.26);} 
-    .hero-grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
-    .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid #3a3a3a;padding:8px 12px;border-radius:999px;color:#e5e5e5;background:#121212}
-    .slogan{color:#c9c9c9;font-size:14px;letter-spacing:.3px}
-    .hero h1{font-size: clamp(30px, 5vw, 56px);line-height:1.05;margin:10px 0 8px}
-    .hero p{color:var(--muted);font-size: clamp(15px, 2vw, 18px)}
+    /* Hero (fundo com fluidez) */
+    .hero{position:relative;padding:90px 0 60px;overflow:hidden}
+    .hero::before{content:"";position:absolute;inset:0;z-index:-1;opacity:var(--inkOpacity);background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 900'><g fill='none' stroke='%239aa0a6' stroke-width='1.6' stroke-linecap='round' opacity='0.85'><path d='M-40 140 C 220 30, 520 240, 840 120 S 1180 50, 1500 160' /><path d='M-60 260 C 200 360, 480 160, 820 260 S 1200 340, 1500 300' /><path d='M-80 400 C 180 320, 500 440, 860 360 S 1260 420, 1520 360' /><path d='M-60 560 C 240 460, 540 640, 900 520 S 1320 500, 1520 580' /><path d='M-40 720 C 260 640, 540 740, 900 700 S 1260 740, 1480 720' /></g></svg>");background-size:cover;background-position:center;filter:contrast(105%)}
+    .hero.has-image::before{background-image:url('./bg-suminagashi.jpg');background-size:cover;background-position:center;}
+
+    .hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}
+    .vertical-title{writing-mode:vertical-rl;text-orientation:upright;font-family:"DM Serif Display", serif;font-size: clamp(36px, 7vw, 96px);line-height:1;border:1px solid var(--stroke);padding:14px 10px;border-radius:16px;color:transparent;-webkit-text-stroke:1px #bdbdbd;letter-spacing:2px}
+    .slogan{color:#6b7280;font-size:14px;letter-spacing:.3px}
+    h1{font-family:"DM Serif Display", serif;font-size: clamp(30px, 4.6vw, 54px);line-height:1.04;margin:12px 0 8px}
+    .lead{color:var(--muted);font-size: clamp(15px, 2vw, 18px)}
     .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
 
-    /* Buttons */
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 20px;border-radius:12px;background:var(--accent);color:#0b0b0b;font-weight:800;border:1px solid #d4d4d4;box-shadow:0 8px 20px rgba(255,255,255,.05);transition:.2s}
+    /* Buttons (preto) */
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 20px;border-radius:12px;background:var(--accent);color:#fff;font-weight:800;border:1px solid #000;box-shadow:0 8px 20px rgba(0,0,0,.08);transition:.2s}
     .btn:hover{transform:translateY(-1px);background:var(--accent-2)}
-    .btn.ghost{background:#000;border:1px solid var(--stroke);color:var(--fg);box-shadow:none}
-    .btn:hover{transform:translateY(-1px);background:var(--accent-2)}
-    .btn.ghost{background:#000;border:1px solid var(--stroke);color:var(--fg);box-shadow:none}
+    .btn.ghost{background:#fff;border:1px solid var(--stroke);color:var(--fg);box-shadow:none}
 
     /* Sections */
-    section{padding:60px 0}
+    section{padding:64px 0}
 
     /* KPIs */
-    .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-    .kpi{background:var(--card);border:1px solid var(--stroke);border-radius:16px;padding:16px;text-align:center;box-shadow:var(--shadow)}
+    .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .kpi{background:#fff;border:1px solid var(--stroke);border-radius:16px;padding:16px;text-align:center;box-shadow:var(--shadow)}
     .kpi b{font-size:26px;letter-spacing:.3px}
 
     /* Cards & grids */
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .card{background:var(--card);border:1px solid var(--stroke);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
-    .card h3{margin:6px 0 8px}
+    .card{background:#fff;border:1px solid var(--stroke);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
+    .card h3{margin:6px 0 8px;font-family:"DM Serif Display", serif}
     .card p{color:var(--muted)}
 
     /* Gallery */
     .grid-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
     .grid-gallery img{width:100%;aspect-ratio:4/5;border-radius:14px;object-fit:cover;transition:transform .3s ease, box-shadow .3s ease}
-    .grid-gallery img:hover{transform:scale(1.03);box-shadow:0 8px 24px rgba(0,0,0,.4)}
+    .grid-gallery img:hover{transform:scale(1.03);box-shadow:0 8px 24px rgba(0,0,0,.08)}
 
     /* Pricing */
-    .pricing{display:grid;grid-template-columns:1fr .9fr;gap:16px}
-    .price-card{background:linear-gradient(180deg,#121212, #0b0b0b);border:1px solid var(--stroke);border-radius:18px;padding:20px;box-shadow:var(--shadow)}
+    .pricing{display:grid;grid-template-columns:1fr .9fr;gap:18px}
+    .price-card{background:#fff;border:1px solid var(--stroke);border-radius:18px;padding:22px;box-shadow:var(--shadow)}
     .price{font-size:44px;font-weight:900}
     .price s{font-size:22px;color:#9ca3af;margin-left:6px}
-    .bullet{display:flex;gap:10px;margin:8px 0;color:#b9bbc0}
+    .bullet{display:flex;gap:10px;margin:8px 0;color:#374151}
 
-    /* Form (dark) */
+    /* Form (light) */
     form{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
-    input[type=email]{flex:1;min-width:220px;padding:14px 12px;border-radius:12px;border:1px solid #303134;background:#0f0f0f;color:#fff;font-size:16px}
-    input[type=email]::placeholder{color:#8a8a8a}
-    .hint{font-size:12px;color:#8ca092;margin-top:6px}
-    .error{color:#fda4af;font-size:13px;display:none;margin-top:6px}
-    .ok{color:#86efac;font-size:13px;display:none;margin-top:6px}
+    input[type=email]{flex:1;min-width:220px;padding:14px 12px;border-radius:12px;border:1px solid #d1d5db;background:#fff;color:#111;font-size:16px}
+    input[type=email]::placeholder{color:#9aa0a6}
+    .hint{font-size:12px;color:#6b7280;margin-top:6px}
+    .error{color:#b91c1c;font-size:13px;display:none;margin-top:6px}
+    .ok{color:#15803d;font-size:13px;display:none;margin-top:6px}
 
     /* FAQ */
-    .faq details{background:var(--card);border:1px solid var(--stroke);border-radius:14px;padding:14px;box-shadow:var(--shadow)}
+    .faq details{background:#fff;border:1px solid var(--stroke);border-radius:14px;padding:14px;box-shadow:var(--shadow)}
     .faq summary{font-weight:700;cursor:pointer;list-style:none}
     .faq summary::-webkit-details-marker{display:none}
 
     /* Footer */
-    .footer{border-top:1px solid var(--stroke);padding:30px 0;color:#bdbdbd}
+    .footer{border-top:1px solid var(--stroke);padding:30px 0;color:#6b7280}
 
     /* Responsividade fina */
-    @media (max-width: 1040px){ .hero-grid{grid-template-columns:1fr} }
+    @media (max-width: 1080px){ .hero-grid{grid-template-columns:1fr} .vertical-title{display:none} }
     @media (max-width: 720px){
       .nav-actions{display:none}
       .price{font-size:36px}
@@ -115,14 +116,6 @@
       .grid-gallery{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
     }
   </style>
-  <script type="application/ld+json">{
-    "@context":"https://schema.org",
-    "@type":"Product",
-    "name":"Organic Brush — Suminagashi Brush Pack (V1)",
-    "brand":{"@type":"Brand","name":"Segunda Pele Tattoo"},
-    "description":"13 pincéis modulares para Procreate + bônus (mandalas e padrões).",
-    "offers":{"@type":"Offer","price":"57.00","priceCurrency":"BRL","availability":"https://schema.org/InStock"}
-  }</script>
 </head>
 <body>
   <header>
@@ -139,21 +132,24 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero has-image">
       <div class="container hero-grid">
+        <!-- Lateral com título vertical como no e-book -->
+        <div class="vertical-title" aria-hidden="true">ORGANIC BRUSH</div>
+
         <div>
-          <span class="badge">Autoral • Modular • Anatômico</span>
-          <div class="slogan">Inspirado na arte milenar do <b>Suminagashi</b> — a fluidez japonesa que moldou a tatuagem moderna.</div>
+          <div class="slogan">Inspirado na arte milenar do <b>Suminagashi</b> — a fluidez japonesa aplicada à tatuagem moderna.</div>
           <h1>Organic Brush — Volume 01: Fluidez Líquida</h1>
-          <p>13 pincéis modulares para Procreate que se encaixam na anatomia, criam composições orgânicas e aceleram seu fluxo criativo. Assinatura de <b>Marcelo Costa</b>.</p>
+          <p class="lead">13 pincéis modulares para Procreate que se encaixam na anatomia, criam composições orgânicas e aceleram seu fluxo criativo. Assinatura de <b>Marcelo Costa</b>.</p>
           <div class="hero-cta">
             <a href="#preco" class="btn" aria-label="Ir para a seção de preço e comprar">Garantir meu acesso</a>
             <a href="#demo" class="btn ghost" aria-label="Ver exemplos e como funciona">Ver exemplos</a>
           </div>
         </div>
+
         <div>
           <div class="price-card">
-            <h3 style="margin:0 0 6px">Oferta de lançamento</h3>
+            <h3 style="margin:0 0 6px;font-family:'DM Serif Display',serif">Oferta de lançamento</h3>
             <div class="price">R$ 57,00 <s>R$ 97,00</s></div>
             <p class="hint">Acesso vitalício + atualizações do Volume 01 incluídas</p>
             <img src="./mock-ebook-hero.png" alt="Mockup do eBook Organic Brush" style="margin-top:10px;border-radius:14px;border:1px solid var(--stroke)">
@@ -173,7 +169,7 @@
 
     <section id="pack">
       <div class="container">
-        <h2 style="font-size:32px;margin:0 0 10px">O que vem no pack</h2>
+        <h2 style="font-family:'DM Serif Display',serif;font-size:32px;margin:0 0 10px">O que vem no pack</h2>
         <p style="color:var(--muted);margin:0 0 18px">Coleção principal de 13 pincéis Suminagashi + bônus de mandalas e padrões geométricos. Construídos para fluxo, contraste e legibilidade em pele real.</p>
         <div class="grid-3">
           <div class="card"><span class="hint">Coleção principal</span><h3>13 pincéis Suminagashi</h3><p>Fluxos líquidos, espirais, vórtices e texturas que se moldam ao corpo para projetos modulares e fechamentos.</p></div>
@@ -185,7 +181,7 @@
 
     <section id="demo">
       <div class="container">
-        <h2 style="font-size:32px;margin:0 0 10px">Veja na prática</h2>
+        <h2 style="font-family:'DM Serif Display',serif;font-size:32px;margin:0 0 10px">Veja na prática</h2>
         <p style="color:var(--muted);margin:0 0 12px">Os pincéis em ação: projetos que respeitam a anatomia e a leitura em pele.</p>
         <div class="grid-gallery">
           <img src="./gemini-1.jpg" alt="Tatuagem suminagashi no braço">
@@ -201,9 +197,9 @@
     <section id="preco">
       <div class="container pricing">
         <div class="price-card">
-          <h2 style="font-size:28px;margin:0 0 10px">Organic Brush — Suminagashi Brush Pack</h2>
+          <h2 style="font-family:'DM Serif Display',serif;font-size:28px;margin:0 0 10px">Organic Brush — Suminagashi Brush Pack</h2>
           <div class="price">R$ 57,00 <s>R$ 97,00</s></div>
-          <div style="color:#d1d1d1;margin:6px 0 12px">Acesso vitalício • Atualizações do Volume 01 incluídas</div>
+          <div style="color:#6b7280;margin:6px 0 12px">Acesso vitalício • Atualizações do Volume 01 incluídas</div>
 
           <!-- Formulário de e-mail + checkout -->
           <form id="purchase-form" novalidate>
@@ -220,7 +216,7 @@
 
         <div class="price-card">
           <span class="hint">Mockups</span>
-          <h3 style="margin:8px 0 6px">Visual do eBook</h3>
+          <h3 style="margin:8px 0 6px;font-family:'DM Serif Display',serif">Visual do eBook</h3>
           <div class="grid-gallery">
             <img src="./mock-ebook-hero.png" alt="Mockup 3D do eBook">
             <img src="./mock-ebook-tablet.png" alt="Mockup do eBook em tablet">
@@ -232,22 +228,22 @@
 
     <section id="faq" class="faq">
       <div class="container" style="display:grid;gap:12px">
-        <h2 style="font-size:28px;margin:0 0 10px">Perguntas frequentes</h2>
+        <h2 style="font-family:'DM Serif Display',serif;font-size:28px;margin:0 0 10px">Perguntas frequentes</h2>
         <details>
           <summary>Funciona em Android, Windows ou outros apps?</summary>
-          <div style="color:#b9bbc0;margin-top:8px">Os pincéis são para Procreate em iPad. Para outros apps não garantimos compatibilidade.</div>
+          <div style="color:#6b7280;margin-top:8px">Os pincéis são para Procreate em iPad. Para outros apps não garantimos compatibilidade.</div>
         </details>
         <details>
           <summary>Posso usar comercialmente?</summary>
-          <div style="color:#b9bbc0;margin-top:8px">Sim, uso autoral e comercial em projetos de tatuagem está liberado. Não é permitido revender, compartilhar os arquivos ou criar pacotes derivados para venda.</div>
+          <div style="color:#6b7280;margin-top:8px">Sim, uso autoral e comercial em projetos de tatuagem está liberado. Não é permitido revender, compartilhar os arquivos ou criar pacotes derivados para venda.</div>
         </details>
         <details>
           <summary>Como instalo no Procreate?</summary>
-          <div style="color:#b9bbc0;margin-top:8px">Baixe o .brushset no iPad, toque para abrir com o Procreate e os pincéis serão importados automaticamente. Um guia rápido acompanha o download.</div>
+          <div style="color:#6b7280;margin-top:8px">Baixe o .brushset no iPad, toque para abrir com o Procreate e os pincéis serão importados automaticamente. Um guia rápido acompanha o download.</div>
         </details>
         <details>
           <summary>Reembolso</summary>
-          <div style="color:#b9bbc0;margin-top:8px">Produto digital com acesso imediato. Não oferecemos reembolso. Problemas técnicos? Fale com o suporte.</div>
+          <div style="color:#6b7280;margin-top:8px">Produto digital com acesso imediato. Não oferecemos reembolso. Problemas técnicos? Fale com o suporte.</div>
         </details>
       </div>
     </section>
