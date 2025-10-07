@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Inter para texto + DM Serif Display para títulos (look editorial do e-book) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Serif+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Serif+Display:ital,wght@0,400;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Organic Brush — Suminagashi Brush Pack | Segunda Pele Tattoo">
   <meta property="og:description" content="13 pincéis modulares para Procreate + bônus. Oferta R$57,00.">
@@ -42,15 +42,15 @@
     header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.85);backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid var(--stroke)}
     .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
     .brand{display:flex;align-items:center;gap:12px}
-    .brand-logo{width:44px;height:44px;border-radius:12px;background:#f2f2f2;display:grid;place-items:center;border:1px solid var(--stroke);overflow:hidden}
-    .brand-logo img{width:28px;height:28px;object-fit:contain}
-    .brand-name{font-weight:800;letter-spacing:.4px}
+    .brand-logo{width:44px;height:44px;display:grid;place-items:center;overflow:hidden;background:transparent;border:none}
+    .brand-logo img{width:34px;height:34px;object-fit:contain}
+    .brand-name{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:.2px}
     .nav-actions{display:flex;align-items:center;gap:10px}
 
     /* Hero (fundo com fluidez) */
     .hero{position:relative;padding:90px 0 60px;overflow:hidden}
-    .hero::before{content:"";position:absolute;inset:0;z-index:-1;opacity:var(--inkOpacity);background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 900'><g fill='none' stroke='%239aa0a6' stroke-width='1.6' stroke-linecap='round' opacity='0.85'><path d='M-40 140 C 220 30, 520 240, 840 120 S 1180 50, 1500 160' /><path d='M-60 260 C 200 360, 480 160, 820 260 S 1200 340, 1500 300' /><path d='M-80 400 C 180 320, 500 440, 860 360 S 1260 420, 1520 360' /><path d='M-60 560 C 240 460, 540 640, 900 520 S 1320 500, 1520 580' /><path d='M-40 720 C 260 640, 540 740, 900 700 S 1260 740, 1480 720' /></g></svg>");background-size:cover;background-position:center;filter:contrast(105%)}
-    .hero.has-image::before{background-image:url('./bg-suminagashi.jpg');background-size:cover;background-position:center;}
+    .hero::before{content:"";position:absolute;inset:0 60% 0 0;z-index:-1;opacity:var(--inkOpacity);background-image:url('./ink-bg-left.png');background-size:contain;background-repeat:no-repeat;background-position:left center;filter:grayscale(100%)}
+    .hero.has-image::before{background-image:url('./ink-bg-left.png');}
 
     .hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}
     .vertical-title{writing-mode:vertical-rl;text-orientation:upright;font-family:"DM Serif Display", serif;font-size: clamp(36px, 7vw, 96px);line-height:1;border:1px solid var(--stroke);padding:14px 10px;border-radius:16px;color:transparent;-webkit-text-stroke:1px #bdbdbd;letter-spacing:2px}
@@ -115,6 +115,7 @@
       .grid-3{grid-template-columns:1fr}
       .grid-gallery{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
     }
+  .hero::after{content:"";position:absolute;inset:0 0 0 65%;z-index:-1;opacity:calc(var(--inkOpacity) - 0.03);background-image:url('./ink-bg-right.png');background-size:contain;background-repeat:no-repeat;background-position:right 10%;filter:grayscale(100%)}
   </style>
 </head>
 <body>
@@ -135,8 +136,6 @@
     <section class="hero has-image">
       <div class="container hero-grid">
         <!-- Lateral com título vertical como no e-book -->
-        <div class="vertical-title" aria-hidden="true">ORGANIC BRUSH</div>
-
         <div>
           <div class="slogan">Inspirado na arte milenar do <b>Suminagashi</b> — a fluidez japonesa aplicada à tatuagem moderna.</div>
           <h1>Organic Brush — Volume 01: Fluidez Líquida</h1>
